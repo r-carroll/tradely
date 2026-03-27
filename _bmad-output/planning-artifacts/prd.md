@@ -76,8 +76,8 @@ Tradely is a multi-tenant B2B Field Service Management (FSM) platform designed s
 
 ### 3. Boots on the Ground (Field Tech Success Path)
 - **Context:** Mike (Tech) hates administrative typing. He receives a push notification for a new urgent stop.
-- **Action:** Views read-only Context Card, taps to navigate (Apple Maps), and completes the physical job. Taps microphone to dictate: "Replaced faulty contactor on AC... Used one 40-amp contactor."
-- **Result:** Tradely's local AI instantly transcribes and parses the audio into a structured draft invoice.
+- **Action:** Views read-only Context Card, taps to navigate (Apple Maps), and completes the physical job. Taps the camera icon to quickly snap "Before/After" photos. Taps microphone to dictate: "Replaced faulty contactor on AC... Used one 40-amp contactor."
+- **Result:** Tradely's local AI instantly transcribes and parses the audio into a structured draft invoice. Mike briefly reviews the parsed output, taps to correct a recognized part name, and hits "Complete Job."
 
 ### 4. End Customer (Success Path)
 - **Context:** David (Customer) anxiously awaits a technician during a heatwave.
@@ -136,17 +136,19 @@ Tradely is a multi-tenant B2B Field Service Management (FSM) platform designed s
 - FR12: Technician can sequentially update job statuses ("En Route", "Arrived", "Completed").
 
 ### Voice-to-Invoice & Billing
-- FR13: Technician can record voice audio detailing work performed and parts used.
-- FR14: System can transcribe spoken audio into text utilizing local on-device OS capabilities.
-- FR15: System can intelligently parse transcribed text to format a structured, line-item draft invoice.
-- FR16: System retains raw transcribed text to facilitate manual review or fallback.
-- FR17: System can securely queue and transmit structured invoices to the backend for Admin finalization.
-- FR18: Admin can review, modify, and finalize draft invoices into official records.
-- FR19: System can dispatch billing webhooks to external processors (Stripe) upon invoice finalization.
+- **FR13:** Technician can capture and attach situational photos (e.g., "Before", "After", "Defect") to the job record.
+- **FR14:** Technician can record voice audio detailing work performed and parts used.
+- **FR15:** System can transcribe spoken audio into text utilizing local on-device OS capabilities.
+- **FR16:** System can intelligently parse transcribed text to format a structured, line-item draft invoice.
+- **FR17:** Technician can seamlessly review and manually edit/correct the AI-parsed transcription or generated line items before submission.
+- **FR18:** System retains raw transcribed text to facilitate manual review or fallback.
+- **FR19:** System can securely queue and transmit structured invoices and attached photos to the backend for Admin finalization.
+- **FR20:** Admin can review, modify, and finalize draft invoices and photo reports into official records.
+- **FR21:** System can dispatch billing webhooks to external processors (Stripe) upon invoice finalization.
 
 ### Customer Communications
-- FR20: System can automatically dispatch outbound SMS notifications to the end customer triggered by specific technician status changes.
-- FR21: System can automatically merge dynamic ETAs and specific technician details (Name, Vehicle) into SMS templates.
+- **FR22:** System can automatically dispatch outbound SMS notifications to the end customer triggered by specific technician status changes.
+- **FR23:** System can automatically merge dynamic ETAs and specific technician details (Name, Vehicle) into SMS templates.
 
 ## Non-Functional Requirements
 
